@@ -47,5 +47,6 @@ export default {
     border: 1px solid #333;
     width: 85%;
     padding: 20px;
+    overflow: auto;
   }
 </style>

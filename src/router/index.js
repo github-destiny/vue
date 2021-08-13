@@ -2,8 +2,7 @@ import VueRouter from "vue-router";
 
 // 引入组件的位置
 import Todo from "../pages/Todo";
-import Github from "../pages/github/Github";
-import Vuex from "../pages/vuex-sum/Vuex";
+import Github from "../pages/Github";
 
 export default new VueRouter({
     routes : [
@@ -15,9 +14,5 @@ export default new VueRouter({
             path : '/github',
             component : Github
         },
-        {
-            path : '/vuex',
-            component : Vuex
-        }
     ]
 })

@@ -3,8 +3,6 @@
         <router-link class="link" to="/todoList">todoList</router-link>
         <br>
         <router-link class="link" to="/github">github</router-link>
-        <br>
-        <router-link class="link" to="/vuex">vuex</router-link>
     </div>
 </template>
 

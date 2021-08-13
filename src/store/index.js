@@ -13,6 +13,9 @@ const actions = {
         }else{
             context.commit('CLEAR_ALL');
         }
+    },
+    updateUserList(context, value){
+        context.commit('UPDATE_USER_LIST', value);
     }
 
 }
@@ -36,15 +39,25 @@ const mutations = {
             todo.done = value
         })
     },
-    CLEAR_ALL(){
+    CLEAR_ALL(state){
         state.todoList = state.todoList.filter((todo)=>{
             return !todo.done
         })
+    },
+    UPDATE_USER_LIST(state, value){
+        state.userList = value.users;
+        state.isFirst = value.isFirst;
+        state.isLoading = value.isLoading;
+        state.errMsg = value.errMsg;
     }
 }
 
 const state = {
-    todoList : JSON.parse(localStorage.getItem('todoList')) || []
+    todoList : JSON.parse(localStorage.getItem('todoList')) || [],
+    userList : [],
+    isFirst : true,
+    isLoading : false,
+    errMsg : '',
 }
 
 const getters = {
